@@ -19,7 +19,7 @@ steps:
 
 - task: NuGetToolInstaller@0
   inputs:
-    versionSpec: '5.4.0'
+    versionSpec: '4.9.4'
     checkLatest: true 
 
 - task: Npm@1
