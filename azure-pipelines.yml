@@ -48,6 +48,8 @@ steps:
   displayName: 'Restore the project - $(buildConfiguration)'
   inputs:
     command: 'restore'
+    feedsToUse: 'select'
+    vstsFeed: 'Space Game - web - Dependencies/Tailspin.SpaceGame.Web.Models2'
     projects: '**/*.csproj'
 
 - task: DotNetCoreCLI@2
