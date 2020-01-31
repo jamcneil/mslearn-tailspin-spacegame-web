@@ -19,7 +19,7 @@ steps:
 
 - task: NuGetToolInstaller@0
   inputs:
-    versionSpec: '4.7.1'
+    versionSpec: '5.4.0'
 
 - task: Npm@1
   displayName: 'Run npm install'
@@ -43,6 +43,12 @@ steps:
     restoreSolution: '**/*.sln'
     feedsToUse: 'select'
     vstsFeed: 'Space Game - web - Dependencies/Tailspin.SpaceGame.Web.Models2'
+
+- task: DotNetCoreCLI@2
+  displayName: 'Restore the project - $(buildConfiguration)'
+  inputs:
+    command: 'restore'
+    projects: '**/*.csproj'
 
 - task: DotNetCoreCLI@2
   displayName: 'Build the project - $(buildConfiguration)'
