@@ -48,6 +48,7 @@ steps:
   displayName: 'Restore the project - $(buildConfiguration)'
   inputs:
     command: 'restore'
+    restoreSolution: '**/*.sln'
     feedsToUse: 'select'
     vstsFeed: 'Space Game - web - Dependencies/Tailspin.SpaceGame.Web.Models2'
 
