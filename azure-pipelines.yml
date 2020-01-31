@@ -19,7 +19,7 @@ steps:
 
 - task: NuGetToolInstaller@0
   inputs:
-    versionSpec: '5.3.0'
+    versionSpec: '5.4.0'
 
 - task: Npm@1
   displayName: 'Run npm install'
@@ -44,6 +44,7 @@ steps:
     feedsToUse: 'select'
     vstsFeed: 'Space Game - web - Dependencies/Tailspin.SpaceGame.Web.Models2'
     includeNuGetOrg: true
+    noCache: false
 
 - task: DotNetCoreCLI@2
   displayName: 'Build the project - $(buildConfiguration)'
