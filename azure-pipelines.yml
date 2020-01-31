@@ -20,7 +20,6 @@ steps:
 - task: NuGetToolInstaller@0
   inputs:
     versionSpec: '5.4.0'
-    checkLatest: true 
 
 - task: Npm@1
   displayName: 'Run npm install'
@@ -49,7 +48,7 @@ steps:
   displayName: 'Build the project - $(buildConfiguration)'
   inputs:
     command: 'build'
-    arguments: '--no-restore --configuration $(buildConfiguration)'
+    arguments: '--configuration $(buildConfiguration)'
     projects: '**/*.csproj'
 
 - task: DotNetCoreCLI@2
